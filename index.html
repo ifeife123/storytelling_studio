@@ -44,7 +44,7 @@ Maine has a program called the Educational Opportunity Tax Credit. The exact det
 
 &lt;img src=https://www.liveandworkinmaine.com/wp-content/uploads/2019/01/Opportunity_Maine_bg-1024x268.jpg&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="4" name=" Do you have children?" tags="" position="811,361.5" size="100,100">Do you have children or plan on having children?
+</tw-passagedata><tw-passagedata pid="4" name=" Do you have children?" tags="" position="647,399.5" size="100,100">Do you have children or plan on having children?
 
 [[Yes -&gt; Yes - has children]]
 [[No -&gt;Do you have student loans?]]
@@ -57,9 +57,9 @@ Maine has a program called the Educational Opportunity Tax Credit. The exact det
 
 &lt;img src=https://i0.wp.com/fbresearch.org/wp-content/uploads/2014/09/iStock_000030816118Large.jpg?ssl=1&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="5" name="  Do you like hikes/camping/outdoor activities?" tags="" position="632,339.5" size="100,100">Do you like hikes/camping/outdoor activities?
+</tw-passagedata><tw-passagedata pid="5" name="  Do you like hikes/camping/outdoor activities?" tags="" position="489,302.5" size="100,100">Do you like hiking or outdoor activities?
 
-[[Yes -&gt; Yes - outdoor activities]]
+[[Yes -&gt; Yes - parks and trails]]
 [[No -&gt; Do you have children?]]
 &lt;style&gt; img {
 	max-width:100%;
@@ -69,50 +69,69 @@ Maine has a program called the Educational Opportunity Tax Credit. The exact det
 
 &lt;img src=https://www.theglobeandmail.com/resizer/VbLe4Cq3EihBgDlXbAI1Vbw28PQ=/1900x0/filters:quality(80)/arc-anglerfish-tgam-prod-tgam.s3.amazonaws.com/public/MFAAGTRQQ5EQNIJ2WEA6DMYO6Q.jpg&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="6" name=" Yes - has children" tags="" position="983,152.5" size="100,100">People with breathing and heart problems, children and the elderly may be particularly sensitive [to PM]
+</tw-passagedata><tw-passagedata pid="6" name=" Yes - has children" tags="" position="983,152.5" size="100,100">People with breathing and heart problems, children and the elderly may be particularly sensitive [to PM] so choosing $city over Bangor, Maine would make your loved ones more unhappy.
 (set: $children to &quot;yes&quot;)
-[[next -&gt;Do you have student loans?]]</tw-passagedata><tw-passagedata pid="7" name=" Yes - outdoor activities" tags="" position="739,166.5" size="100,100">Fine particles are also the main cause of reduced visibility (haze) in parts of the United States, including many of our treasured national parks and wilderness areas. 
-PM adds heavy levels of haze to the environment, reducing visibility and making it more difficult to enjoy our treasured national parks and wilderness areas.
+[[next -&gt;Do you have student loans?]]</tw-passagedata><tw-passagedata pid="7" name=" Yes - outdoor activities" tags="" position="741,169.5" size="100,100">Fine particles are also the main cause of reduced visibility (haze) in parts of the United States, including many of our treasured national parks and wilderness areas. 
+PM adds heavy levels of haze to the environment, reducing visibility and making it more difficult to enjoy our treasured national parks and wilderness areas. 
 (set: $outdoor_activities to &quot;yes&quot;)
-[[Next -&gt; Do you have children?]]</tw-passagedata><tw-passagedata pid="8" name=" Which city?" tags="" position="163,301.5" size="100,100">What city do you live in?
+[[Next -&gt; Do you have children?]]
+
+&lt;style&gt; img {
+	max-width:100%;
+	max-height:100%;
+}
+&lt;/style&gt;
+
+&lt;img src=https://ifeife123.github.io/storytelling_studio/imgs/foggy_field.png&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name=" Which city?" tags="" position="163,301.5" size="100,100">What city do you live in?
 
 [[Los Angeles]]
-[[New York City]]
+[[Houston]]
 
 
+</tw-passagedata><tw-passagedata pid="9" name="Los Angeles" tags="" position="326,466.5" size="100,100">(set: $city to &quot;Los Angeles&quot;)
+(set: $pm25 to &quot;106 µg/m3&quot;)
+This is a graphic of particulate matter (PM) pollution levels in $city. PM is comprised of extremely small particles and liquid droplets, and inhaling them can cause health problems for the throat, nose, lungs, and more. In $city, PM 2.5, or PM that is around 2.5 micrometers in diameter, on average $pm25 during 2019, a level that is unhealthy for humans to breathe in.
+[[Next  -&gt;  Do you like hikes/camping/outdoor activities?]]
 
-{(set: $choice to 3)
-(set: $choices to (array: &quot;T Shirt&quot;, &quot;Dress Shirt&quot;, &quot;No Shirt&quot;))
-(set: $clothes to $choices&#39;s 3st)
-(live: 20ms)[
-	(if: $choice &gt; 0)[
-		$clothes
-	]
-]}
-{(set: $bodyLink to &quot;|body&gt;[
-	(link: $choices&#39;s 1st)[
-		(set: $choice to 1)
-		(set: $clothes to $choices&#39;s 1st)
-        (replace: ?body)[$bodyLink]
-	] -- (link: $choices&#39;s 2st)[
-		(set: $choice to 2)
-		(set: $clothes to $choices&#39;s 2st)
-        (replace: ?body)[$bodyLink]
-	] -- (link: $choices&#39;s 3st)[
-		(set: $choice to 3)
-		(set: $clothes to $choices&#39;s 3st)
-        (replace: ?body)[$bodyLink]	]
-]&quot;)
-$bodyLink
+&lt;style&gt; img {
+	max-width:100%;
+	max-height:100%;
 }
+&lt;/style&gt;
 
-</tw-passagedata><tw-passagedata pid="9" name="Los Angeles" tags="" position="327,466.5" size="100,100">This is a graphic of particulate matter (PM) pollution levels in Los Angeles. PM is comprised of extremely small particles and liquid droplets, and inhaling them can cause health problems for the throat, nose, lungs, and more. In Los Angeles, PM 2.5, or PM that is around 2.5 micrometers in diameter, reached XX during the highest hour, a level that is unhealthy for humans to breathe in
-[[Next  -&gt;  Do you like hikes/camping/outdoor activities?]]</tw-passagedata><tw-passagedata pid="10" name="New York City" tags="" position="340,189.5" size="100,100">This is a graphic of particulate matter (PM) pollution levels in New York. PM is comprised of extremely small particles and liquid droplets, and inhaling them can cause health problems for the throat, nose, lungs, and more. In New York, PM 2.5, or PM that is around 2.5 micrometers in diameter, reached XX during the highest hour, a level that is unhealthy for humans to breathe in
-[[Next  -&gt;  Do you like hikes/camping/outdoor activities?]]</tw-passagedata><tw-passagedata pid="11" name="Conclusion" tags="" position="1288,362.5" size="100,100">The reasons $name should move to Bangor, Maine?
+&lt;img src=https://ifeife123.github.io/storytelling_studio/imgs/LA.png&gt;
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="10" name="Houston" tags="" position="339,189.5" size="100,100">(set: $city to &quot;Houston&quot;)
+(set: $pm25 to &quot;129 µg/m3&quot;)
+This is a graphic of particulate matter (PM) pollution levels in $city. PM is comprised of extremely small particles and liquid droplets, and inhaling them can cause health problems for the throat, nose, lungs, and more. In $city, PM 2.5, or PM that is around 2.5 micrometers in diameter, on average $pm25 during 2019, a level that is unhealthy for humans to breathe in
+[[Next  -&gt;  Do you like hikes/camping/outdoor activities?]]
+
+&lt;style&gt; img {
+	max-width:100%;
+	max-height:100%;
+}
+&lt;/style&gt;
+
+&lt;img src=https://ifeife123.github.io/storytelling_studio/imgs/houston.png&gt;
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="11" name="Conclusion" tags="" position="1288,362.5" size="100,100">$name, What are the reasons should move to Bangor, Maine?
 
 (if: $loans is &quot;yes&quot;)[Because you will get money back from your student loans]
 (if: $children is &quot;yes&quot;)[Because your children can breathe fresh air]
-(if: $outdoor_activities is &quot;yes&quot;)[Because you can enjoy outdoor activities]</tw-passagedata></tw-storydata>
+(if: $outdoor_activities is &quot;yes&quot;)[Because you can enjoy outdoor activities]
+
+And most of all it will save your life!!! </tw-passagedata><tw-passagedata pid="12" name=" Yes - parks and trails" tags="" position="607,171.5" size="100,100">You&#39;re in luck! Almost 90% of Maine is covered in forest, with many national parks and hiking trails.
+[[next -&gt; Yes - outdoor activities]]
+
+&lt;style&gt; img {
+	max-width:100%;
+	max-height:100%;
+}
+&lt;/style&gt;
+
+&lt;img src=https://ifeife123.github.io/storytelling_studio/imgs/forrest.png&gt;
+&lt;/div&gt;</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
